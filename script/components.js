@@ -4,8 +4,8 @@ function loadHeader() {
         <img src="img/heavenlybodies-logo.png" class="logo" alt="Logo of a black hole that says heaven bodies under it"/>
         <nav>
             <a href="index.html" class="red">Home</a>
-            <a href="about.html" class="yellow">About</a>
-            <a href="contact.html" class="blue">Contact</a>
+            <a href="contact.html" class="yellow">FAQ</a>
+            <a href="about.html" class="blue">About</a>
         </nav>
     `;
     document.querySelector('header').innerHTML = headerHTML;
