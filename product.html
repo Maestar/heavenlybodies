@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/product.css">
+    <script src="script/components.js"></script>
+    <title>Product - Heavenly Bodies</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="product-container">
+            <a href="index.html" class="back-link">&larr; Back</a>
+
+            <div class="product-detail">
+                <div class="product-image">
+                    <img id="productImage" src="" alt="Zine">
+                </div>
+
+                <div class="product-info">
+                    <h2 id="productTitle">Zine Title</h2>
+                    <p id="productDescription">Description goes here.</p>
+
+                    <div class="product-details">
+                        <p><strong>Format:</strong> Physical Print Zine</p>
+                        <p><strong>Pages:</strong> <span id="pageCount">24</span></p>
+                        <p><strong>Size:</strong> 5.5" x 8.5"</p>
+                        <p><strong>Price:</strong> FREE</p>
+                    </div>
+
+                    <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="order-button" id="orderButton">
+                        Request This Zine
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        const products = {
+            '1': {
+                title: 'Hotel Cheyenne Vol. 1',
+                description: 'Char\'s very bad no good day',
+                image: 'img/issue1.png',
+                pages: 24,
+                formUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform'
+            },
+            '2': {
+                title: 'Moon Phases Vol. 2',
+                description: 'Poetry and art inspired by the lunar cycle.',
+                image: 'img/issue2.png',
+                pages: 28,
+                formUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform'
+            },
+            '3': {
+                title: 'Asteroid Belt Vol. 3',
+                description: 'Short stories from the edges of space.',
+                image: 'img/issue3.png',
+                pages: 32,
+                formUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform'
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id') || '1';
+        const product = products[productId];
+
+        if (product) {
+            document.getElementById('productTitle').textContent = product.title;
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('productImage').src = product.image;
+            document.getElementById('productImage').alt = product.title;
+            document.getElementById('pageCount').textContent = product.pages;
+            document.getElementById('orderButton').href = product.formUrl;
+        }
+
+
+    </script>
+</body>
+</html>
+

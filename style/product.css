@@ -1,0 +1,79 @@
+/* ===== PRODUCT PAGE ===== */
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--accent-3);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    color: var(--accent-2);
+}
+
+.product-detail {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border: 3px solid var(--card-text);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid var(--text);
+}
+
+.product-info h2 {
+    font-size: 2rem;
+    color: var(--accent-3);
+    margin-bottom: 1rem;
+}
+.productDescription {
+    color: var(--card-text);
+}
+.product-info p {
+    margin-bottom: 1rem;
+}
+
+.product-details {
+    background-color: var(--bg);
+    border: 2px solid var(--text);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    color: var(--text);
+}
+
+.order-button {
+    display: inline-block;
+    background-color: var(--accent-1);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.order-button:hover {
+    background-color: var(--accent-2);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+}
