@@ -1,7 +1,7 @@
 // Header HTML
 function loadHeader() {
     const headerHTML = /*html*/`
-        <img src="img/heavenlybodies-logo.png" alt="Logo of a black hole that says heaven bodies under it"/>
+        <img src="img/heavenlybodies-logo.png" class="logo" alt="Logo of a black hole that says heaven bodies under it"/>
         <nav>
             <a href="index.html" class="red">Home</a>
             <a href="about.html" class="yellow">About</a>
