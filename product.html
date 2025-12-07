@@ -23,7 +23,7 @@
                 <div class="product-info">
                     <h2 id="productTitle">Zine Title</h2>
                     <p id="productDescription">Description goes here.</p>
-
+                    <div id="tagContainer" class="tags"></div>
                     <div class="product-details">
                         <p><strong>Format:</strong> Physical Print Zine</p>
                         <p><strong>Pages:</strong> <span id="pageCount">24</span></p>
@@ -45,6 +45,7 @@
         const products = {
             '1': {
                 title: 'Hotel Cheyenne Vol. 1',
+                tags: ['Gundam', 'Fiction', 'Illust.'],
                 description: 'Char\'s very bad no good day',
                 image: 'img/issue1.png',
                 pages: 24,
@@ -52,6 +53,7 @@
             },
             '2': {
                 title: 'Moon Phases Vol. 2',
+                tags: ['Gundam','Adult', 'Fiction', 'Illust.'],
                 description: 'Poetry and art inspired by the lunar cycle.',
                 image: 'img/issue2.png',
                 pages: 28,
@@ -59,6 +61,7 @@
             },
             '3': {
                 title: 'Asteroid Belt Vol. 3',
+                tags: ['Gundam','Adult', 'Fiction', 'Illust.'],
                 description: 'Short stories from the edges of space.',
                 image: 'img/issue3.png',
                 pages: 32,
@@ -71,12 +74,18 @@
         const product = products[productId];
 
         if (product) {
+            let tags = '';
+            product.tags.forEach(tag => {
+                tags+= `<span>${tag}</span>`
+            });
+
             document.getElementById('productTitle').textContent = product.title;
             document.getElementById('productDescription').textContent = product.description;
             document.getElementById('productImage').src = product.image;
             document.getElementById('productImage').alt = product.title;
             document.getElementById('pageCount').textContent = product.pages;
             document.getElementById('orderButton').href = product.formUrl;
+            document.getElementById('tagContainer').innerHTML = tags;
         }
 
 
