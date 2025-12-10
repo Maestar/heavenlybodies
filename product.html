@@ -13,7 +13,6 @@
 
     <main>
         <div class="product-container">
-            <a href="index.html" class="back-link">&larr; Back</a>
 
             <div class="product-detail">
                 <div class="product-image">
@@ -31,9 +30,10 @@
                         <p><strong>Price:</strong> FREE</p>
                     </div>
 
-                    <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="order-button" id="orderButton">
+                    <a href="" target="_blank" class="order-button" id="orderButton">
                         Request This Zine
                     </a>
+                    <a href="index.html" class="back-button">&larr; Back</a>
                 </div>
             </div>
         </div>
@@ -46,26 +46,26 @@
             '1': {
                 title: 'Hotel Cheyenne Vol. 1',
                 tags: ['Gundam', 'Fiction', 'Illust.'],
-                description: 'Char\'s very bad no good day',
+                description: 'Char returns from a trip past Mars and learns maybe he should have stayed there. <br><br> This zine is currently is <strong>PRE-ORDER</strong> and is scheduled to release <strong>January 9th, 2026.</strong>',
                 image: 'img/issue1.png',
-                pages: 24,
-                formUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform'
+                pages: 22,
+                formUrl: 'https://cryptpad.fr/form/#/2/form/view/WItgFsuVwyOr2IK2tMTsi4ISWniyQqaCR26j9Rbwzjs/'
             },
             '2': {
-                title: 'Moon Phases Vol. 2',
+                title: '',
                 tags: ['Gundam','Adult', 'Fiction', 'Illust.'],
-                description: 'Poetry and art inspired by the lunar cycle.',
+                description: '',
                 image: 'img/issue2.png',
                 pages: 28,
-                formUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform'
+                formUrl: ''
             },
             '3': {
-                title: 'Asteroid Belt Vol. 3',
+                title: '',
                 tags: ['Gundam','Adult', 'Fiction', 'Illust.'],
-                description: 'Short stories from the edges of space.',
+                description: '',
                 image: 'img/issue3.png',
                 pages: 32,
-                formUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform'
+                formUrl: ''
             }
         };
 
@@ -80,7 +80,7 @@
             });
 
             document.getElementById('productTitle').textContent = product.title;
-            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('productDescription').innerHTML = product.description;
             document.getElementById('productImage').src = product.image;
             document.getElementById('productImage').alt = product.title;
             document.getElementById('pageCount').textContent = product.pages;
